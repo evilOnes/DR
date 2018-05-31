@@ -5,7 +5,7 @@
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        public System.ComponentModel.IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -26,7 +26,7 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
+        public void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
             this.tb_phone = new System.Windows.Forms.TextBox();
@@ -170,16 +170,16 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox tb_phone;
-        private System.Windows.Forms.ComboBox cb_idA;
-        private System.Windows.Forms.DateTimePicker date;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.NumericUpDown nud_zadol;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btn_done;
-        private System.Windows.Forms.Button btn_cancel;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.TextBox tb_phone;
+        public System.Windows.Forms.ComboBox cb_idA;
+        public System.Windows.Forms.DateTimePicker date;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.NumericUpDown nud_zadol;
+        public System.Windows.Forms.Label label5;
+        public System.Windows.Forms.Button btn_done;
+        public System.Windows.Forms.Button btn_cancel;
     }
 }

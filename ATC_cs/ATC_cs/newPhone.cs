@@ -26,18 +26,6 @@ namespace ATC_cs
         private void btn_done_Click(object sender, EventArgs e)
         {
             Main.ok = true;
-            Main.Open();
-            string query = "insert into `Телефон` (`Номер телефона`,`Код абонента`,`Задолжность`,`Дата`) values ('" +
-                tb_phone.Text + "', " +
-                cb_idA.SelectedItem + ", (" +
-                nud_zadol.Value.ToString().Replace(',', '.') + "), '" +
-                date.Value.Day + "." + date.Value.Month + "." + date.Value.Year + "')";
-
-            MessageBox.Show(query);
-            Main.cmd.CommandText = query;
-            Main.cmd.ExecuteScalar();
-
-            Main.c.Close();
             Close();
         }
 

@@ -230,7 +230,22 @@ namespace ATC_cs
             newPhone f = new newPhone();
             f.ShowDialog();
             if (ok)
+            {
+                Open();
+                string query = "insert into `Телефон` (`Номер телефона`,`Код абонента`,`Задолжность`,`Дата`) values ('" +
+                    f.tb_phone.Text + "', " +
+                    f.cb_idA.SelectedItem + ", " +
+                    f.nud_zadol.Value.ToString().Replace(',', '.') + ", '" +
+                    f.date.Value.Day + "." + f.date.Value.Month + "." + f.date.Value.Year + "')";
+                Clipboard.SetText(query);//works in access but not works here
+
+                MessageBox.Show(query);
+                cmd.CommandText = query;
+                cmd.ExecuteScalar();
+
+                c.Close();
                 UpdateDgv();
+            }
         }
 
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
