@@ -52,6 +52,24 @@
     <Compile Include="AuthForm.Designer.cs">
       <DependentUpon>AuthForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="catalog_Abonents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="catalog_Abonents.Designer.cs">
+      <DependentUpon>catalog_Abonents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="catalog_Phones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="catalog_Phones.Designer.cs">
+      <DependentUpon>catalog_Phones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="catalog_Tariffs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="catalog_Tariffs.Designer.cs">
+      <DependentUpon>catalog_Tariffs.cs</DependentUpon>
+    </Compile>
     <Compile Include="GreetForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,16 +82,37 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="newAbonent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="newAbonent.Designer.cs">
+      <DependentUpon>newAbonent.cs</DependentUpon>
+    </Compile>
     <Compile Include="newPhone.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="newPhone.Designer.cs">
       <DependentUpon>newPhone.cs</DependentUpon>
     </Compile>
+    <Compile Include="newTariff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="newTariff.Designer.cs">
+      <DependentUpon>newTariff.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AuthForm.resx">
       <DependentUpon>AuthForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="catalog_Abonents.resx">
+      <DependentUpon>catalog_Abonents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="catalog_Phones.resx">
+      <DependentUpon>catalog_Phones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="catalog_Tariffs.resx">
+      <DependentUpon>catalog_Tariffs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GreetForm.resx">
       <DependentUpon>GreetForm.cs</DependentUpon>
@@ -81,8 +120,14 @@
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="newAbonent.resx">
+      <DependentUpon>newAbonent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="newPhone.resx">
       <DependentUpon>newPhone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newTariff.resx">
+      <DependentUpon>newTariff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -105,11 +150,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="АТС.accdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
