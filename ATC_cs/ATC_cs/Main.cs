@@ -556,6 +556,20 @@ namespace ATC_cs
                 new PrintPageEventHandler(printDocument1_PrintPage);
             printPreviewButton_Click(sender, e);
         }
+
+        private void nud_summa_ValueChanged(object sender, EventArgs e)
+        {
+            decimal res = Convert.ToDecimal(tariffs.Find(x => x.tariff == cb_tariff.Text).balance) - nud_summa.Value;
+            if (res < 0) res = 0;
+            nud_zadol.Value = res;
+        }
+
+        private void cb_tariff_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            decimal res = Convert.ToDecimal(tariffs.Find(x => x.tariff == cb_tariff.Text).balance) - nud_summa.Value;
+            if (res < 0) res = 0;
+            nud_zadol.Value = res;
+        }
     }
     //класс, объединяющий все другие
     public class Abonent

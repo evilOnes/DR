@@ -173,7 +173,7 @@
             // печатьToolStripMenuItem
             // 
             this.печатьToolStripMenuItem.Name = "печатьToolStripMenuItem";
-            this.печатьToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.печатьToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
             this.печатьToolStripMenuItem.Text = "Печать";
             this.печатьToolStripMenuItem.Click += new System.EventHandler(this.печатьToolStripMenuItem_Click);
             // 
@@ -190,21 +190,21 @@
             // телефонToolStripMenuItem
             // 
             this.телефонToolStripMenuItem.Name = "телефонToolStripMenuItem";
-            this.телефонToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.телефонToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.телефонToolStripMenuItem.Text = "Телефоны";
             this.телефонToolStripMenuItem.Click += new System.EventHandler(this.телефонToolStripMenuItem_Click);
             // 
             // абонентToolStripMenuItem
             // 
             this.абонентToolStripMenuItem.Name = "абонентToolStripMenuItem";
-            this.абонентToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.абонентToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.абонентToolStripMenuItem.Text = "Абоненты";
             this.абонентToolStripMenuItem.Click += new System.EventHandler(this.абонентToolStripMenuItem_Click);
             // 
             // тарифыToolStripMenuItem
             // 
             this.тарифыToolStripMenuItem.Name = "тарифыToolStripMenuItem";
-            this.тарифыToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.тарифыToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.тарифыToolStripMenuItem.Text = "Тарифы";
             this.тарифыToolStripMenuItem.Click += new System.EventHandler(this.тарифыToolStripMenuItem_Click);
             // 
@@ -219,7 +219,7 @@
             // оПрограммеToolStripMenuItem1
             // 
             this.оПрограммеToolStripMenuItem1.Name = "оПрограммеToolStripMenuItem1";
-            this.оПрограммеToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.оПрограммеToolStripMenuItem1.Size = new System.Drawing.Size(138, 22);
             this.оПрограммеToolStripMenuItem1.Text = "О программе";
             this.оПрограммеToolStripMenuItem1.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem1_Click);
             // 
@@ -257,6 +257,7 @@
             this.cb_tariff.Name = "cb_tariff";
             this.cb_tariff.Size = new System.Drawing.Size(99, 21);
             this.cb_tariff.TabIndex = 30;
+            this.cb_tariff.SelectedIndexChanged += new System.EventHandler(this.cb_tariff_SelectedIndexChanged);
             // 
             // cb_abonent
             // 
@@ -285,6 +286,7 @@
             this.nud_summa.Name = "nud_summa";
             this.nud_summa.Size = new System.Drawing.Size(99, 20);
             this.nud_summa.TabIndex = 33;
+            this.nud_summa.ValueChanged += new System.EventHandler(this.nud_summa_ValueChanged);
             // 
             // nud_zadol
             // 
@@ -295,6 +297,7 @@
             5,
             0});
             this.nud_zadol.Name = "nud_zadol";
+            this.nud_zadol.ReadOnly = true;
             this.nud_zadol.Size = new System.Drawing.Size(99, 20);
             this.nud_zadol.TabIndex = 34;
             // 
