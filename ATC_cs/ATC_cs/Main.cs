@@ -360,11 +360,8 @@ namespace ATC_cs
         {
             string sql;
 
-            PersonalData pd;
-            Phone ph;
-            TariffA tA;
-            Tariff t;
-                        
+            PersonalData pd = null;
+            pd = pds.Find(x => x.name == cb_abonent.Text);       
             Open();
 
             if (true)
