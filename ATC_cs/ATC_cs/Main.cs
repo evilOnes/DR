@@ -281,7 +281,7 @@ namespace ATC_cs
                     f.tb_phone.Text + "', " +
                     f.cb_idA.SelectedItem + ", " +
                     f.nud_zadol.Value.ToString().Replace(',', '.') + ", '" +
-                    f.date.Value.Day + "." + f.date.Value.Month + "." + f.date.Value.Year + "')";
+                    f.date.Value + "')";
                 Clipboard.SetText(query);//works in access but not works here
 
                 MessageBox.Show(query);
@@ -306,7 +306,7 @@ namespace ATC_cs
             {
                 cmd.CommandText = "insert into `Личные данные` (`ФИО абонента`, `Дата рождения`, `Домашний адрес`) values ('" +
                     f.tb_name.Text + "', '" +
-                   f.date.Value.Day + "." + f.date.Value.Month + "." + f.date.Value.Year + "', '" + 
+                   f.date.Value + "', '" + 
                    f.tb_address.Text + "')";
 
                 Open();
@@ -383,7 +383,7 @@ namespace ATC_cs
                     sql = "update `Оплата` set " +
                         "`Сумма` = " + nud_summa.Value.ToString().Replace(',', '.') +
                         ", `Задолжность` = " + nud_zadol.Value.ToString().Replace(',', '.') +
-                        ", `Дата оплаты` = '" + date.Value.Day + "." + date.Value.Month + "." + date.Value.Year + "'" +
+                        ", `Дата оплаты` = '" + date.Value + "'" +
                         ", `Номер телефона` = '" + cb_phone.Text +
 
                         "' where `Код абонента` = " + pd.id;
@@ -392,7 +392,7 @@ namespace ATC_cs
                        pd.id + ", " +
                         nud_summa.Value.ToString().Replace(',', '.') + ", " +
                         nud_zadol.Value.ToString().Replace(',', '.') + ", '" +
-                        date.Value.Day + "." + date.Value.Month + "." + date.Value.Year + "', '" +
+                        date.Value + "', '" +
                         cb_phone.Text + "')";
 
                 cmd.CommandText = sql;
@@ -405,7 +405,7 @@ namespace ATC_cs
                     cmd.CommandText = "update `Телефон` set " +
                         "`Код абонента` = " + pd.id +
                         ", `Задолжность` = " + nud_zadol.Value.ToString().Replace(',', '.') + 
-                        ",`Дата` = '" + date.Value.Day + "." + date.Value.Month + "." + date.Value.Year + "'" + 
+                        ",`Дата` = '" + date.Value + "'" + 
 
                         " where `Номер телефона` = '" + cb_phone.Text + "'";
                 }
@@ -414,7 +414,7 @@ namespace ATC_cs
                         cb_phone.Text + "', " +
                         pd.id + ", " +
                         nud_zadol.Value.ToString().Replace(',', '.') + ", '" +
-                        date.Value.Day + "." + date.Value.Month + "." + date.Value.Year + "')";
+                        date.Value + "')";
 
                 MessageBox.Show(cmd.CommandText);
                 Clipboard.SetText(cmd.CommandText);
@@ -425,14 +425,14 @@ namespace ATC_cs
                 {
                     cmd.CommandText = "update `Тариф абонента` set " +
                         "`Код тарифа` = " + tariffsA.Find(x => x.phone == cb_phone.Text).idTariff +
-                        ", `Дата` = '" + date.Value.Day + "." + date.Value.Month + "." + date.Value.Year + "'"
+                        ", `Дата` = '" + date.Value + "'"
                         + "where `Номер телефона` = '" + cb_phone.Text + "'";
                 }
                 else
                     cmd.CommandText = "insert into `Тариф абонента` (`Номер телефона`, `Код тарифа`, `Дата`) values (" +
                          cb_phone.Text + ", " +
                          tariffs.Find(x => x.tariff == cb_tariff.Text).id + ", '" +
-                         date.Value.Day + "." + date.Value.Month + "." + date.Value.Year + "')";
+                         date.Value + "')";
 
                 cmd.ExecuteNonQuery();//`Тариф абонента`
             }
