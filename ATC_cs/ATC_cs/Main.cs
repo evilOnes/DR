@@ -364,16 +364,7 @@ namespace ATC_cs
             Phone ph;
             TariffA tA;
             Tariff t;
-
-        //get personal data
-        PD:
-            pd = pds.Find(x => x.name == cb_abonent.Text);
-            if (pd == null)
-            {
-                btn_newAbonent_Click(sender, e);
-                goto PD;
-            }
-            
+                        
             Open();
 
             if (true)
