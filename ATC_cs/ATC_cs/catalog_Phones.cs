@@ -44,5 +44,18 @@ namespace ATC_cs
                 dgv_abonents.Columns[i].Width = w;
             }
         }
+
+        private void tb_search_TextChanged(object sender, EventArgs e)
+        {
+            dgv_abonents.ClearSelection();
+            if (tb_search.Text != "")
+            {
+                for (int i = 0; i < dgv_abonents.RowCount; i++)
+                {
+                    if (dgv_abonents.Rows[i].Cells[0].Value.ToString().Contains(tb_search.Text))
+                        dgv_abonents.Rows[i].Selected = true;
+                }
+            }
+        }
     }
 }
